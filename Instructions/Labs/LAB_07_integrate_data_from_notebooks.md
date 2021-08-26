@@ -125,7 +125,7 @@ In this exercise, you create a mapping data flow that copies user profile data t
 
     ![The manage hub is highlighted.](images/manage-hub.png "Manage hub")
 
-2. Select **Liked services** on the left-hand menu. Locate an **Azure Data Lake Storage Gen2** linked service in the list, hover over the service, then select **{} Code**.
+2. Select **Linked services** on the left-hand menu. Locate an **Azure Data Lake Storage Gen2** linked service in the list, hover over the service, then select **{} Code**.
 
     ![The Code button is highlighted on the ADLS Gen2 service.](images/adlsgen2-linked-service-code-button.png "Code button")
 
