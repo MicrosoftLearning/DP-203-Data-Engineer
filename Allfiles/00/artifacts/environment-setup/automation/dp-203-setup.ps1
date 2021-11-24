@@ -2,6 +2,9 @@
 Import-Module Az.CosmosDB
 Import-Module "..\solliance-synapse-automation"
 
+# To Invoke-RestMethod and Invoke-WebRequest works
+[Net.ServicePointManager]::SecurityProtocol = [Net.SecurityProtocolType]::Tls -bor [Net.SecurityProtocolType]::Tls11 -bor [Net.SecurityProtocolType]::Tls12
+
 # Paths
 $artifactsPath = "..\..\"
 $noteBooksPath = "..\notebooks"
@@ -68,7 +71,7 @@ while ($complexPassword -ne 1)
     $sqlPassword = Read-Host "Enter a password for the Azure SQL Database.
     `The password must meet complexity requirements:
     ` - Minimum 8 characters. 
-    ` - At least one upper case English letter [A-Z
+    ` - At least one upper case English letter [A-Z]
     ` - At least one lower case English letter [a-z]
     ` - At least one digit [0-9]
     ` - At least one special character (!,@,#,%,^,&,$)
@@ -154,7 +157,7 @@ New-AzResourceGroupDeployment -ResourceGroupName $resourceGroupName `
   -TemplateFile "00-asa-workspace-core.json" `
   -Mode Complete `
   -uniqueSuffix $suffix `
-  -sqlAdministratorLoginPassword $sqlPassword `
+  -administratorLoginPassword $sqlPassword `
   -Force
 
 

@@ -8,7 +8,7 @@
         "description": "Suffix added to all resource name to make them unique."
       }
     },
-    "sqlAdministratorLoginPassword": {
+    "administratorLoginPassword": {
       "type": "String",
       "metadata": {
         "description": "Password for SQL Admin"
@@ -17,7 +17,7 @@
   },
   "variables": {
     "location": "[resourceGroup().location]",
-    "sqlAdministratorLogin": "asa.sql.admin",
+    "administratorLogin": "asa.sql.admin",
     "workspaceName": "[concat('asaworkspace', parameters('uniqueSuffix'))]",
     "adlsStorageAccountName": "[concat('asadatalake', parameters('uniqueSuffix'))]",
     "asaName": "[concat('asa', parameters('uniqueSuffix'))]",
@@ -126,7 +126,7 @@
         "[resourceId('Microsoft.KeyVault/vaults', variables('keyVaultName'))]"
       ],
       "properties": {
-        "value": "[parameters('sqlAdministratorLoginPassword')]"
+        "value": "[parameters('administratorLoginPassword')]"
       }
     },
     {
@@ -213,8 +213,8 @@
         "virtualNetworkProfile": {
           "computeSubnetId": "[variables('computeSubnetId')]"
         },
-        "sqlAdministratorLogin": "[variables('sqlAdministratorLogin')]",
-        "sqlAdministratorLoginPassword": "[parameters('sqlAdministratorLoginPassword')]"
+        "administratorLogin": "[variables('administratorLogin')]",
+        "administratorLoginPassword": "[parameters('administratorLoginPassword')]"
       },
       "resources": [
         {
