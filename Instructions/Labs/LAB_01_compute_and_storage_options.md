@@ -99,7 +99,7 @@ In this exercise, you will use an Azure Databricks workspace and perform Structu
    exit
    ```
 
-    **NOTE**: This script should run in roughly 10-15 minutes and loads data into Synapse.
+   > **NOTE**: This script should run in roughly 10-15 minutes and loads data into Synapse.
 >
 > If it seems as though the script hangs while creating linked services for the SQLPool01 dedicated SQL pool (there are 3), press **Enter**. This tends to refresh the PowerShell script and allows it to continue to the end.
 >
