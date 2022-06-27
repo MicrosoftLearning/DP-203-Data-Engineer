@@ -100,7 +100,7 @@ Now that we have the new Azure Cosmos DB container with the analytical store ena
 7. Set the following properties, then click **OK**:
     - **Name**: Enter `cosmos_db_htap`.
     - **Linked service**: Select **asacosmosdb01**.
-    - **Collection**: Select **UserProfileHTAP**/
+    - **Collection**: Select **UserProfileHTAP**.
     - **Import schema**: Select **From connection/store** under **Import schema)**.
 
     ![The form is configured as described.](images/dataset-properties.png "Set properties")
