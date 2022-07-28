@@ -1,5 +1,4 @@
-<<<<<<< HEAD
-﻿# Import modules
+# Import modules
 Import-Module Az.CosmosDB
 Import-Module "..\solliance-synapse-automation"
 
@@ -564,4 +563,3 @@ $SetupStep2Variables = "
 
 $SetupStep2Variables
 
->>>>>>> 33f1bab407bc8695db011ff39a98c425270cfb7a
