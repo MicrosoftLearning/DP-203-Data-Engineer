@@ -101,7 +101,7 @@ Rather than creating a script with OPENROWSET and a path to the root 2019 folder
     - **3)** The CREATE EXTERNAL TABLE WITH statement specifies the file location and refers to the new external file format and data source created above.
     - **4)** Finally, we select the top 100 results from the `All2019Sales` external table.
     
-4. In the CREATE EXTERNAL TABLE statement, in the **[TransactionId] varchar(8000)** line, change 8000 to 4000 and add `COLLATE Latin1_General_100_BIN2_UTF8`; and replace the *LOCATION* value with `sale-small/Year=2019/*/*/*/*.parquet` so that the statement becomes similar to the following (except with your unique resource SUFFIX):
+4. In the CREATE EXTERNAL TABLE statement, in the **[TransactionId] varchar(4000)** line, add `COLLATE Latin1_General_100_BIN2_UTF8`; and replace the *LOCATION* value with `sale-small/Year=2019/*/*/*/*.parquet` so that the statement becomes similar to the following (except with your unique resource SUFFIX):
 
 ```sql
 CREATE EXTERNAL TABLE All2019Sales (
